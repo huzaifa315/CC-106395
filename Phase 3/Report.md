@@ -297,7 +297,7 @@ If you were not able to convince your parents not to force you for degree and no
 ###Problem 3: My girlfriend's father won't let me marry her unless I've a degree###
 Replace the heading and text of this to mention the problem you have faced in your project.
 
-##References##
+## References ##
 - cs.purdue.edu/homes/hosking/502/project/grammer.html.
 - cs.purdue.edu/homes/hosking/502/project/grammar.html.
 - zaach.github.com.
