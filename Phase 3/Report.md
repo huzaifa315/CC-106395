@@ -68,7 +68,7 @@ CFG of Mini Java:
 ```
 ###Lexical Specification###
 The Java lexical definition describes tokens for Identifier, and the various literals:
-
+```
 Literal:
 	IntegerLiteral
 	BooleanLiteral
@@ -267,6 +267,7 @@ ArrayCreationExpression:
 	new ClassType [ Expression ] Dimension*
 Dimension:
 	[ ]
+```
 
 ###Grammar###
 Replace this text with a complete GRAMMAR of your selected language
