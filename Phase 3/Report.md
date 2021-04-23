@@ -298,7 +298,8 @@ If you were not able to convince your parents not to force you for degree and no
 Replace the heading and text of this to mention the problem you have faced in your project.
 
 ##References##
-- Mention and add [links](https://guides.github.com/features/mastering-markdown/), references, books, research papers, code samples, you used to get help in the project.
+- cs.purdue.edu/homes/hosking/502/project/grammer.html.
+- cs.purdue.edu/homes/hosking/502/project/grammar.html.
 - zaach.github.com.
 - nodejs.org.
 - javascriptjabber.com.
