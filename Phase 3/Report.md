@@ -10,7 +10,7 @@ StdID | Name
 In this course we learnt about the compilers and how does compiler work. we have studied it in details and the course project is also about compiler we were assigned to design a compiler and run it like the compiler. The project is divided into 3 main phases the first phase is about selecting a language and practice on the language with some basic codes like loops of array conditons of if else and simple program statement. First phase is completed when we practiced the simple statements and succesfully run it. Then the phase 2 came in where we need to design a code for lexical analysis. When we successfully run the the phase 1 we were able to get our hands on the real part where we need to desgin an algorithm for the lexical analysis and we were determined as we have came into long way in the course and confident and energetic to to work on the mini java to design the algorithm and we deliver the flex program in the phase 2. Then phase 3 cme in where  we need to design a parser using YACC and CFG. in this phase we were tasked to design parser where we give input and the system generates the error and the line number where error occured and we were also tasked to give the hint of the error usign the flex program we which was delivered in the phase 2. That's how our whole project is delivered in the  phases and how we delivered it.
 
 ## Sample Language Used ##
-Replace this text with the desription of what was your sample language. You may include some code examples of loops, if and simple statements
+Following code include the examples of loops, if and simple statements
 ```Simple Program on Mini Java:
 
 class SimpleProgram {
