@@ -66,7 +66,7 @@ CFG of Mini Java:
 
 • A Context Free Grammar is a set of A -> X1X2... Xn (n 0) productions. If n is equal to 0, we can write either A-> or A -> ∈.
 ```
-###Lexical Specification###
+### Lexical Specification ###
 The Java lexical definition describes tokens for Identifier, and the various literals:
 ```
 Literal:
@@ -269,8 +269,16 @@ Dimension:
 	[ ]
 ```
 
-###Grammar###
-Replace this text with a complete GRAMMAR of your selected language
+### Grammar ###
+CFG of Mini Java:
+
+• Productions A → α, A → β... abbreviated as A → α | β |...
+
+• N, the sequence of non-terminals (A, B, C... ∈). The start symbol is a non-terminal in the grammar.
+
+• T stands for the collection of tokens, also known as terminals.
+
+• A Context Free Grammar is a set of A -> X1X2... Xn (n 0) productions. If n is equal to 0, we can write either A-> or A -> ∈.
 
 
 ###Approach###
