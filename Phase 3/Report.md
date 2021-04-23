@@ -299,9 +299,8 @@ Replace the heading and text of this to mention the problem you have faced in yo
 
 ##References##
 - Mention and add [links](https://guides.github.com/features/mastering-markdown/), references, books, research papers, code samples, you used to get help in the project.
-- Use bullets like this.
-- Mention all references. Plagiarism will not be tolerated.
-- You see markdown is not that difficult.
-- You are CS students not some tom harry from BBA SHE-B-A :-).
-- You can and must learn to use markdown and Github.
-- All future project development will be down in something similar to GITHUB
+- zaach.github.com.
+- nodejs.org.
+- javascriptjabber.com.
+- google.com.
+- wikipedia.
