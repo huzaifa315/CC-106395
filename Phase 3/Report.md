@@ -67,7 +67,206 @@ CFG of Mini Java:
 • A Context Free Grammar is a set of A -> X1X2... Xn (n 0) productions. If n is equal to 0, we can write either A-> or A -> ∈.
 ```
 ###Lexical Specification###
-Replace this text with a complete lexical specification of your selected programming language.
+The Java lexical definition describes tokens for Identifier, and the various literals:
+
+Literal:
+	IntegerLiteral
+	BooleanLiteral
+	CharacterLiteral
+	StringLiteral
+	NullLiteral
+In MiniJava we accept identifiers consisting of ASCII characters only, integer literals including octal and hexadecimal, and character and string literals consisting of ASCII characters only, and including escapes.
+Types
+Type:
+	PrimitiveType
+	ReferenceType
+PrimitiveType:
+	int
+	boolean
+ReferenceType:
+	ClassType
+	ArrayType
+ClassType:
+	Name
+ArrayType:
+	PrimitiveType [ ]
+	ClassType [ ]
+	ArrayType [ ]
+Names
+Name:
+	SimpleName
+	QualifiedName
+SimpleName:
+	Identifier
+QualifiedName:
+	Name . Identifier
+Packages
+CompilationUnit:
+	TypeDeclaration*
+TypeDeclaration:
+	ClassDeclaration
+	;
+Modifiers
+Modifiers:
+	Modifier*
+Modifier:
+	public
+	static
+	native
+Classes
+Class Declaration
+ClassDeclaration:
+	class Identifier Superopt ClassBody
+Super:
+	extends ClassType
+ClassBody:
+	{ ClassMemberDeclaration* }
+ClassMemberDeclaration:
+	FieldDeclaration
+	MethodDeclaration
+Field Declarations
+FieldDeclaration:
+	Modifiers Type IdentifierList ;
+IdentifierList:
+	Identifier
+	IdentifierList , Identifier
+Method Declarations
+MethodDeclaration:
+	MethodHeader MethodBody
+MethodHeader:
+	Modifiers Type MethodDeclarator Throwsopt
+	Modifiers void MethodDeclarator Throwsopt
+MethodDeclarator:
+	Identifier ( FormalParameterListopt )
+FormalParameterList:
+	FormalParameter
+	FormalParameterList , FormalParameter
+FormalParameter:
+	Type Identifier
+Throws:
+	throws ClassType
+MethodBody:
+	Block
+	;
+Blocks and Statements
+Block:
+	{ BlockStatement* }
+BlockStatement:
+	LocalVariableDeclarationStatement
+	Statement
+LocalVariableDeclarationStatement:
+	LocalVariableDeclaration ;
+LocalVariableDeclaration:
+	Type VariableDeclarators
+VariableDeclarators:
+	VariableDeclarator
+	VariableDeclarators , VariableDeclarator
+VariableDeclarator:
+	Identifier
+	Identifier = Expression
+Statement:
+	Block
+	ExpressionStatement
+	IfThenStatement
+	IfThenElseStatement
+	WhileStatement
+	DoWhileStatement
+	ReturnStatement
+	BreakStatement
+	ContinueStatement
+	ForStatement
+ExpressionStatement:
+	StatementExpressionopt ;
+StatementExpression:
+	Expression
+IfThenStatement:
+	if ( Expression ) Statement
+IfThenElseStatement:
+	if ( Expression ) Statement else Statement
+WhileStatement:
+	while ( Expression ) Statement
+DoWhileStatement:
+	do Statement while ( Expression ) ;
+ReturnStatement:
+	return Expressionopt ;
+BreakStatement:
+	break ;
+ContinueStatement:
+	continue ;
+ForStatement:
+	for ( ForInitopt ; Expressionopt ; ForUpdateopt ) Statement
+ForInit:
+	StatementExpressionList
+	LocalVariableDeclaration
+ForUpdate:
+	StatementExpressionList
+StatementExpressionList:
+	StatementExpression
+	StatementExpressionList , StatementExpression
+Expressions
+Expression:
+	ConditionalExpression
+	AssignmentExpression
+AssignmentExpression:
+	ConditionalExpression = Expression
+ConditionalExpression:
+	InfixExpression
+	InfixExpression ? Expression : ConditionalExpression
+InfixExpression:
+	PrefixExpression
+	InfixExpression InfixOp PrefixExpression
+InfixOp:
+	||
+	&&
+	==
+	!=
+	<
+	>
+	<=
+	>=
+	+
+	-
+	*
+	/
+PrefixExpression:
+	PrefixOp PrefixExpression
+	PostfixExpression
+PrefixOp:
+	-
+	!
+PostfixExpression:
+	Primary Suffix*
+Suffix:
+	ArrayAccess
+	FieldAccess
+	MethodInvocation
+ArrayAccess:
+	[ Expression ]
+Selector:
+	. Identifier
+FieldAccess:
+	Selector
+MethodInvocation:
+	Selector ( ArgumentListopt )
+ArgumentList:
+	Expression
+	ArgumentList , Expression
+Primary:
+	( Expression )
+	this
+	Literal
+	Identifier
+	super FieldAccess
+	super MethodInvocation
+	ClassInstanceCreationExpression
+	ArrayCreationExpression
+ClassInstanceCreationExpression:
+	new ClassType ( )
+ArrayCreationExpression:
+	new PrimitiveType [ Expression ] Dimension*
+	new ClassType [ Expression ] Dimension*
+Dimension:
+	[ ]
 
 ###Grammar###
 Replace this text with a complete GRAMMAR of your selected language
