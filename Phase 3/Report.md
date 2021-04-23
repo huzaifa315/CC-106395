@@ -1,13 +1,13 @@
-#CC 106395: MINI JAVA#
+# CC 106395: MINI JAVA #
 
-###PROJECT MEMBERS###
+### PROJECT MEMBERS ###
 StdID | Name
 ------------ | -------------
 **62112** | **Syed Huzaifa Bin Saeed** <!--this is the group leader in bold-->
-54321 | Sajid Rashid
+61806 | Akif Hussain
 <!-- Replace name and student ids with acutal group member names and ids-->
 ## Project Description ##
-Replace this text with the description of your project. Tell what the project was about. What you aimed to deliver in the project.
+In this course we learnt about the compilers and how does compiler work. we have studied it in details and the course project is also about compiler we were assigned to design a compiler and run it like the compiler. The project is divided into 3 main phases the first phase is about selecting a language and practice on the language with some basic codes like loops of array conditons of if else and simple program statement. First phase is completed when we practiced the simple statements and succesfully run it. Then the phase 2 came in where we need to design a code for lexical analysis. When we successfully run the the phase 1 we were able to get our hands on the real part where we need to desgin an algorithm for the lexical analysis and we were determined as we have came into long way in the course and confident and energetic to to work on the mini java to design the algorithm.
 
 ##Sample Language Used ##
 Replace this text with the desription of what was your sample language. You may include some code examples of loops, if and simple statements
