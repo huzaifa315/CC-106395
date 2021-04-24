@@ -287,9 +287,8 @@ We follow the phases approach as assigned by our course faculty. But to our side
 ## Problems Faced ##
 As we were new to this compiler, and we got to know that we have to built a compiler on mini languages so we faced several problems during this project.
 
-###Problem 1: I don't know how to Code###
-Transfer yourself to social sciences department. Blah blah blah. This is an example. Replace it with your own problem description and how you resolved it.
-Don't just blindly copy paste this report. This is a sample template file.
+###Problem 1: I don't know how to Code in mini java###
+We were unaware of the languages which are used to built compiler projects. So choosing the language is the first and foremost problem in the project. We researched about the languages which can be understandable or we can convert our code from our aware language to any of these language. We tried it but at the end we decided to go for the mini java as most of the people are aware of the java language or can understand the language code without many difficullties. So we choosing the mini java and then design and developing the code is quite hard for us.
 
 ###Problem 2: My Parents forced me for a degree###
 If you were not able to convince your parents not to force you for degree and now you are doing it for them, then do it with your best effort and not half heartedly. There is no point wasting this time with finding a loop hole here and there and passing courses without actually learning anything.
