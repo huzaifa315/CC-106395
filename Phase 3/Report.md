@@ -284,8 +284,8 @@ CFG of Mini Java:
 ### Approach ###
 We follow the phases approach as assigned by our course faculty. But to our side we sub divided the phases into chunks to keep track of the project and to deliver it in time. As we also have other course project so breaking it into sub phases was seems to be better approach for us. And we were new to this part so breaking it was a good decision and less hectic for us because understanding of the language and code in that language is quite difficult for us. 
 
-##Problems Faced##
-Replace this text with the explaination of the problems you faced in the project, and how you resolved them. Again you can give each of your problems a heading of level 3.
+## Problems Faced ##
+As we were new to this compiler, and we got to know that we have to built a compiler on mini languages so we faced several problems during this project.
 
 ###Problem 1: I don't know how to Code###
 Transfer yourself to social sciences department. Blah blah blah. This is an example. Replace it with your own problem description and how you resolved it.
