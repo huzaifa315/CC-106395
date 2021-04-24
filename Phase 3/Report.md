@@ -287,13 +287,13 @@ We follow the phases approach as assigned by our course faculty. But to our side
 ## Problems Faced ##
 As we were new to this compiler, and we got to know that we have to built a compiler on mini languages so we faced several problems during this project.
 
-### Problem 1: I don't know how to Code in mini java###
+### Problem 1: I don't know how to Code in mini java ###
 We were unaware of the languages which are used to built compiler projects. So choosing the language is the first and foremost problem in the project. We researched about the languages which can be understandable or we can convert our code from our aware language to any of these language. We tried it but at the end we decided to go for the mini java as most of the people are aware of the java language or can understand the language code without many difficullties. So we choosing the mini java and then design and developing the code is quite hard for us.
 
-### Problem 2: Developing Code and Errors###
+### Problem 2: Developing Code and Errors ###
 The number of errors in the program we get when we tried to convert the code in mini java. first it was so much time consuing and when we successfully write the code in mini java there were countless errors as we were not aware of the types of error as this was our first hands on experience which cause us so much delay in completing a task.
 
-### Problem 3: Time consumption###
+### Problem 3: Time consumption ###
 This project was the most hectic and full of stress as this took so much time and the deadlines were so near as updation of the phases as what we need to provide in which phase were too close to deadlines as new languages and new errors are so much time consuming. And uploading on github was sometimes was a negative point or my partner as he is new to this platform and I also haven't done so many tasks on github too.
 
 ## References ##
