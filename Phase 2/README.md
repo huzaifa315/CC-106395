@@ -10,60 +10,114 @@
 
     %{
 
-    #include<stdio.h>
-    #define OP 1
-    #define Program 2
-    #define Specifier 3
-    #define Keyword 4
-    #define String 5
-    #define Punctuation 6 
-    #define Spaces 7
-    #define ID 8
-    #define Bracket 9 
-    #define Number 10
-    #define Comment 11
-    #define Print 12
- 
-    %}
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <string.h>
+
+#include "code.h"
+
+#include "y.tab.h"
+
+int yylineno;
+
+%}
     
     
     
 
 ## Rules For Code:
 
-1.	main {printf("\n %d Classes name:%s",Program,yytext);}
+"class" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Class; }
 
-2.	"class" {printf("\n %d Starting of the program:%s",Program,yytext);}
+"public" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Public; }
 
-3.	"+"|"-"|"*"|"/" {printf("\n %d The  Operators are:%s",OP,yytext);}
+"static" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Static; }
 
-4.	"=" {printf("\n %d operator Assignment is :%s",OP,yytext);}
+"void" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Void; }
 
-5.	"<"|">"|"=="|"!=" {printf("\n %d After Comparision Operators:%s",OP,yytext);}
+"main" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Main; }
 
-6.	"&&"|"||" {printf("\n %d The Logical Operators are:%s",OP,yytext);}
+"if" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return If; }
 
-7.	[0-9]* {printf("\n %d The Digits:%s",Number,yytext);}
+"else" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Else; }
 
-8.	"."|";"|"," {printf("\n %d ThePunctuations:%s",Punctuation,yytext);}
+"while" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return While; }
 
-9.	[a-zA-Z] {printf("\n %d The Letters:%s",String,yytext);}
+"Extends" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Extends; }
 
-10.	"/"[a-zA-Z0-9!@#.,:$%^&()_+]|"/"[a-zA-Z0-9!@#$%^&()_+]"/" {printf("\n %d Comment Done:%s",Comment,yytext);}
+"int" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Integer; }
 
-11.	int|void|boolean|double|float {printf("\n %d Keywords Are:%s",Keyword,yytext);}
+"boolean" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Boolean; }
 
-12.	[ |\n|\t|" "] {printf("\n %d The Whitespaces Are:%s",Spaces,yytext);}
+"String" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return String; }
 
-13.	"("|")"|"["|"]"|"{"|"}" {printf("\n %d Brackets we have :%s",Bracket,yytext);}
+"true" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return True; }
 
-14.	private|static {printf("\n %d Specifiers we have:%s",Specifier,yytext);}
-	
-15.     [a-zA-Z]+[_a-zA-Z0-9]* {printf("\n %d Variable We have:%s",ID,yytext);}
+"false" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return False; }
 
-16.	if|else {printf("\n %d The Loops are:%s",Keyword,yytext);}
+"this" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return This; }
 
-17.     "System.out.println"|"System.out.print" {printf("\n %d the Printed statement are:%s",Print,yytext);}
+"new" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return New; }
+
+"System.out.println" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Println; }
+
+"length" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Length; }
+
+"return" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Return; }
+
+a-zA-Z* { char val = (char)malloc(strlen("identifier: ")+strlen(yytext)+10); sprintf(val, "identifier: %s", yytext); yylval.code = new_code(val, 0); yylval.code->line = yylineno; return Id; }
+
+1-9* { char val = (char)malloc(strlen("IntegerIteral: ")+strlen(yytext)+10); sprintf(val, "IntegerIteral: %s", yytext); yylval.code = new_code(val, 0); yylval.code->line = yylineno; return IntegerIteral; }
+
+("0x"|"0X")([0-9]|[a-fA-F])+ { char val = (char)malloc(strlen("IntegerIteral: ")+strlen(yytext)+10); sprintf(val, "IntegerIteral: %s", yytext); yylval.code = new_code(val, 0); yylval.code->line = yylineno; return IntegerIteral; }
+
+("0b"|"0B")("0"|"1")+ { char val = (char)malloc(strlen("IntegerIteral: ")+strlen(yytext)+10); sprintf(val, "IntegerIteral: %s", yytext); yylval.code = new_code(val, 0); yylval.code->line = yylineno; return IntegerIteral; }
+
+"0"([0-8])* { char val = (char)malloc(strlen("IntegerIteral: ")+strlen(yytext)+10); sprintf(val, "IntegerIteral: %s", yytext); yylval.code = new_code(val, 0); yylval.code->line = yylineno; return IntegerIteral; }
+
+"&&" { return And; }
+
+"." { return '.'; }
+
+"=" { return '='; }
+
+"+" { return '+'; }
+
+"-" { return '-'; }
+
+"" { return ''; }
+
+"<" { return '<'; }
+
+"!" { return '!'; }
+
+"{" { return Lbrace; }
+
+"}" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Rbrace; }
+
+"[" { return Laccess; }
+
+"]" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Raccess; }
+
+"(" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return LBracket; }
+
+")" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return RBracket; }
+
+";" { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Semicolon; }
+
+"," { yylval.code = new_code(yytext, 0); yylval.code->line = yylineno; return Comma; }
+
+"//".*"\n" { yylineno++; }
+
+"/"(.|"\n")"*\" { yylineno++; }
+
+" "|"\t"|"\r" { /do nothing/ }
+
+"\n" { yylineno++; }
+
+. { fprintf(stderr, "Not Recognized(word)"); }
 
 
 
