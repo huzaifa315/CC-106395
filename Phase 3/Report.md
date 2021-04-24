@@ -281,8 +281,8 @@ CFG of Mini Java:
 • A Context Free Grammar is a set of A -> X1X2... Xn (n 0) productions. If n is equal to 0, we can write either A-> or A -> ∈.
 
 
-###Approach###
-How you handled the tasks that were given? How your program works? What will you have to do to translate the program to C# code?
+### Approach ###
+We follow the phases approach as assigned by our course faculty. But to our side we sub divided the phases into chunks to keep track of the project and to deliver it in time. As we also have other course project so breaking it into sub phases was seems to be better approach for us. And we were new to this part so breaking it was a good decision and less hectic for us because understanding of the language and code in that language is quite difficult for us. 
 
 ##Problems Faced##
 Replace this text with the explaination of the problems you faced in the project, and how you resolved them. Again you can give each of your problems a heading of level 3.
